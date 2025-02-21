@@ -60,6 +60,7 @@
     "wrangler": "^3.101.0"
   },
   "dependencies": {
+    "@inlang/paraglide-js": "^1.11.8",
     "@inlang/paraglide-sveltekit": "^0.11.1",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/typography": "^0.5.15"
