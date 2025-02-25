@@ -859,7 +859,7 @@
 						</div>
 
 						<!-- Tab Content -->
-						<div class="mt-6">
+						<div class="mt-6 min-h-[300px]">
 							{#if activeTab === 'techSpec'}
 								{#each defaultTechSpec[currentPost.categoryId].techSpec as section}
 									<Section {section} />
@@ -890,7 +890,8 @@
             <a
             href="/quotes"
             class=" px-6 text-base lg:text-xl rounded-lg p-2 bg-blue-500 hover:bg-blue-600 font-semibold text-white"> ĐẶT LỊCH TƯ VẤN  </a>
-            <Dialog.Close class="px-6 py-2 bg-slate-300 font-sm text-slate-800 hover:bg-slate-400 font-semibold rounded-lg" >ĐÓNG HIỂN THỊ</Dialog.Close>
+            <Dialog.Close class="px-6 py-2 bg-slate-300 font-sm text-slate-800 hover:bg-slate-400 font-semibold rounded-lg" >TRỞ LẠI</Dialog.Close>
         </div>
+
 	</Dialog.Content>
 </Dialog.Root>

@@ -43,7 +43,7 @@
 
         <div class="text-center mt-12">
             <a 
-                href="/products" 
+                href="products/thangTaiKhach" 
                 class="lg:text-xl text-blue-600 hover:text-blue-800 hover:underline inline-block"
             >
                 Tìm hiểu thêm

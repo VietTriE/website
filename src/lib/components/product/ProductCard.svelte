@@ -45,7 +45,7 @@
 				onclick={() => handleClick(product.id)}
 				class=" font-semibold italic text-blue-500 hover:underline"
 			>
-				XEM THÊM
+				XEM CHI TIẾT
 			</button>
 		</div>
 	</div>

@@ -20,12 +20,12 @@
 <div class="container mx-auto px-4">
     <!-- Mobile Menu Button -->
     <button 
-        class="lg:hidden fixed top-4 left-4 z-50 p-2 bg-white rounded-lg shadow-lg"
+        class="lg:hidden fixed left-0 top-1/2 -translate-y-1/2 z-50 p-2 h-[60px] bg-blue-500 text-white rounded-r-lg shadow-lg"
         onclick={toggleMobileMenu}
         aria-label="Toggle menu"
     >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 {isMobileMenuOpen ? 'rotate-180' : ''} transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
     </button>
 
@@ -34,7 +34,7 @@
         <div 
             class="lg:col-span-1 fixed lg:relative lg:block inset-y-0 left-0 z-40 w-64 
                    transform transition-transform duration-300 ease-in-out
-                   {isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} 
+                   {isMobileMenuOpen ? 'translate-x-0 mt-20' : '-translate-x-full'} 
                    lg:translate-x-0"
         >
             <div class="bg-white h-full lg:h-auto shadow-lg p-6 lg:sticky lg:top-24">
@@ -53,7 +53,7 @@
                         </svg>
                     </button>
                 </div>
-                <nav class="space-y-1">
+                <nav class="space-y-1 px-2">
                     {#each data.news as post}
                         <a 
                             href={`/news/${post.id}`}

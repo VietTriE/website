@@ -210,17 +210,17 @@
             </div>
         </div>
     {/if}
-    {#if data.id === "tayVin"}
+    {#if data.id === "vatLieu"}
         <div class="flex flex-col items-center">
             <div class="flex flex-col items-center">
-                <span class="text-xl lg:text-2xl font-semibold text-slate-700">MẪU TAY VỊN</span>
+                <span class="text-xl lg:text-2xl font-semibold text-slate-700">MẪU VẬT LIỆU</span>
                 <div class=" mt-8 lg:mt-12 grid grid-cols-2 gap-8 md:grid-cols-3 md:gap-10 lg:gap-12 xl:grid-cols-4" >
                     {#each data.patterns as item}
                     <div class=" flex flex-col items-center bg-white rounded-md" >
                         <img
                         src={item.image}
                         alt={item.name}
-                        class="w-full aspect-square object-contain rounded-md"
+                        class="w-full aspect-square object-cover rounded-md"
                         >
                         <span class=" text-xl text-slate-700 py-2 mt-2">{item.name}</span>
                     </div>

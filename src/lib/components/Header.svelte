@@ -6,11 +6,11 @@
 
 	const menuItems = $state([
 		{ title: 'GIỚI THIỆU', href: '/about' },
-		{ title: 'SẢN PHẨM', href: '/products' },
-		{ title: 'MẪU MÃ', href: '/patterns' },
+		{ title: 'SẢN PHẨM', href: 'products/thangTaiKhach' },
+		{ title: 'MẪU MÃ', href: '/patterns/cabin' },
 		{ title: 'DỊCH VỤ', href: '/services' },
 		{ title: 'DỰ ÁN', href: '/projects' },
-		{ title: 'BÁO GIÁ', href: '/quotes' },
+		{ title: 'LIÊN HỆ', href: '/quotes' },
 		{ title: 'TIN TỨC', href: '/news' },
 		{ title: 'TUYỂN DỤNG', href: '/careers' }
 	]);
@@ -85,6 +85,7 @@
 						<a
 							href={item.href}
 							class="font-medium transition-colors {isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}"
+							onclick={() => isMenuOpen = false}
 						>
 							{item.title}
 						</a>
@@ -96,14 +97,14 @@
 							class="flex items-center space-x-2 rounded px-2 py-1 hover:bg-gray-100"
 							onclick={() => switchToLanguage('vi')}
 						>
-							<img src="/flags/vi.svg" alt="Vietnamese" class="h-4 w-6" />
+							<img src="https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/viFlag.png" alt="Vietnamese" class="h-4 w-4" />
 							<span>Tiếng Việt</span>
 						</button>
 						<button
 							class="flex items-center space-x-2 rounded px-2 py-1 hover:bg-gray-100"
 							onclick={() => switchToLanguage('en')}
 						>
-							<img src="/flags/en.svg" alt="English" class="h-4 w-6" />
+							<img src="https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/usFlag.png" alt="English" class="h-4 w-4" />
 							<span>English</span>
 						</button>
 					</div>
