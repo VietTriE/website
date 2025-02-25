@@ -7,7 +7,7 @@
 	const menuItems = $state([
 		{ title: 'GIỚI THIỆU', href: '/about' },
 		{ title: 'SẢN PHẨM', href: '/products' },
-		{ title: 'LINH KIỆN', href: '/parts' },
+		{ title: 'MẪU MÃ', href: '/patterns' },
 		{ title: 'DỊCH VỤ', href: '/services' },
 		{ title: 'DỰ ÁN', href: '/projects' },
 		{ title: 'BÁO GIÁ', href: '/quotes' },

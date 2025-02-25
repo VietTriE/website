@@ -1,8 +1,5 @@
 <script lang="ts">
-    interface Section {
-        type: string;
-        content?: string[];
-    }
+    import type {Section} from "$lib/types"
     
     let { section } = $props<{ section: Section }>();
 </script>

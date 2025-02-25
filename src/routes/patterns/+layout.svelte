@@ -3,15 +3,15 @@
     let { children } = $props();
     let isMobileMenuOpen = $state(false);
 
-    const productCategories = [
-        { title: 'THANG TẢI KHÁCH', href: '/products/thangTaiKhach' },
-        { title: 'THANG TẢI HÀNG', href: '/products/thangTaiHang' },
-        { title: 'THANG TẢI Ô TÔ', href: '/products/thangTaiOTo' },
-        { title: 'THANG TẢI THỰC PHẨM', href: '/products/thangThucPham' },
-        { title: 'THANG MÁY QUAN SÁT', href: '/products/thangQuanSat' },
-        { title: 'THANG TẢI GIƯỜNG BỆNH', href: '/products/thangTaiGiuongBenh' },
-        { title: 'THANG TẢI RÁC', href: '/products/thangTaiRac'},
-        { title: 'TỜI TẢI HÀNG', href: '/products/toiTaiHang'},
+    const patternCategories = [
+        { title: 'CABIN', href: '/patterns/cabin' },
+        { title: 'CỬA TẦNG', href: '/patterns/cuaTang' },
+        { title: 'SÀN CABIN', href: '/patterns/sanCabin' },
+        { title: 'TRẦN GIẢ', href: '/patterns/tranGia' },
+        { title: 'HOA VĂN INOX', href: '/patterns/hoaVanInox' },
+        { title: 'VẬT LIỆU', href: '/patterns/vatLieu' },
+        { title: 'TAY VỊN', href: '/patterns/tayVin'},
+        { title: 'COP/HIB', href: '/patterns/hib'},
     ];
 
     let active = $state((href: string) => $page.url.pathname === href);
@@ -22,7 +22,7 @@
         <div class="container mx-auto px-4">
             <!-- Desktop Navigation -->
             <nav class="hidden lg:flex space-x-8 py-4 justify-center">
-                {#each productCategories as category}
+                {#each patternCategories as category}
                     <a 
                         href={category.href}
                         class="text-sm font-medium transition-colors {active(category.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}"
@@ -38,7 +38,7 @@
                     class="flex items-center text-gray-700 hover:text-blue-600 "
                     onclick={() => isMobileMenuOpen = !isMobileMenuOpen}
                 >
-                    <span class="mr-2 font-semibold">Danh mục sản phẩm</span>
+                    <span class="mr-2 font-semibold">Danh mục mẫu mã</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
@@ -46,7 +46,7 @@
     
                 {#if isMobileMenuOpen}
                     <div class="absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-lg">
-                        {#each productCategories as category}
+                        {#each patternCategories as category}
                             <a 
                                 href={category.href}
                                 class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"

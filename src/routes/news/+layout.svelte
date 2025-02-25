@@ -41,7 +41,7 @@
                 <div class="flex justify-between items-center mb-6 lg:block">
                     <h2 class="text-2xl font-bold flex items-center">
                         <span class="w-1 h-6 bg-blue-700 mr-3"></span>
-                        DỰ ÁN
+                        TIN TỨC
                     </h2>
                     <button 
                         class="lg:hidden p-2"
@@ -54,16 +54,16 @@
                     </button>
                 </div>
                 <nav class="space-y-1">
-                    {#each data.projects as project}
+                    {#each data.news as post}
                         <a 
-                            href={`/projects/${project.id}`}
+                            href={`/news/${post.id}`}
                             class="block px-3 py-2 text-sm font-medium rounded-md transition-colors
-                                  {$page.params.id === project.id 
+                                  {$page.params.id === post.id 
                                     ? 'bg-blue-50 text-blue-700' 
                                     : 'hover:bg-blue-50 hover:text-blue-700'}"
                             onclick={() => isMobileMenuOpen = false}
                         >
-                            {project.title}
+                            {post.title}
                         </a>
                     {/each}
                 </nav>

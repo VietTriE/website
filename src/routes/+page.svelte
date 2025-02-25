@@ -5,6 +5,7 @@
 	import ProjectSection from '$lib/components/ProjectSection.svelte';
 	import NewsSection from '$lib/components/NewsSection.svelte';
 	import PartnersSection from '$lib/components/PartnersSection.svelte';
+	import PatternsSection from '$lib/components/PatternsSection.svelte'
 
 	let productTypes = [
 		{
@@ -48,6 +49,56 @@
 			categoryId: 'toiTaiHang'
 		}
 	];
+	let patternTypes = [
+		{
+			id: 'cabin',
+			lable: 'CABIN',
+			image: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/cabinPT.png',
+			catalogImage: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/cabinImage.png'
+		},
+		{
+			id: 'cuaTang',
+			lable: 'CỬA TẦNG',
+			image: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/cuaTangPT.png',
+			catalogImage: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/cuaTangImage.png'
+		},
+		{
+			id: 'sanCabin',
+			lable: 'SÀN CABIN',
+			image: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/sanCabinPT.png',
+			catalogImage: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/sanCabinImage.png'
+		},
+		{
+			id: 'tranGia',
+			lable: 'TRẦN GIẢ',
+			image: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/tranGiaPT.png',
+			catalogImage: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/tranGiaImage.png'
+		},
+		{
+			id: 'hoaVanInox',
+			lable: 'HOA VĂN INOX',
+			image: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/hoaVanInoxPT.png',
+			catalogImage: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/hoaVanInoxImage.png'
+		},
+		{
+			id: 'vatLieu',
+			lable: 'VẬT LIỆU',
+			image: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/vatLieuPT.png',
+			catalogImage: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/vatLieuImage.png'
+		},
+		{
+			id: 'tayVin',
+			lable: 'TAY VỊN',
+			image: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/hibPT.png',
+			catalogImage: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/tayVinImage.png'
+		},
+		{
+			id: 'hib',
+			lable: 'COP/HIB',
+			image: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/copPT.png',
+			catalogImage: 'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/copImage.png'
+		}
+	];
 	let logos = [
 		'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/logoFuji.png',
 		'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/logoMitsu.png',
@@ -64,32 +115,33 @@
 		'https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/logoWeco.png'
 	];
 
-  let { data } = $props();
-
+	let { data } = $props();
 </script>
 
 <div class="">
 	<LandingPageSection />
 
-{#await data.services}
-    <div class="loading">Loading services...</div>
-{:then services}
-    <ServicesSection {services} />
-{/await}
+	{#await data.services}
+		<div class="loading">Loading services...</div>
+	{:then services}
+		<ServicesSection {services} />
+	{/await}
 
-<ProductsSection products={productTypes}/>
+	<ProductsSection products={productTypes} />
 
-{#await data.projects}
-    <div class="loading">Loading projects...</div>
-{:then projects}
-    <ProjectSection {projects} />
-{/await}
+	<PatternsSection patterns={patternTypes} />
 
-{#await data.news}
-    <div class="loading">Loading news...</div>
-{:then news}
-    <NewsSection {news} />
-{/await}
+	{#await data.projects}
+		<div class="loading">Loading projects...</div>
+	{:then projects}
+		<ProjectSection {projects} />
+	{/await}
 
-<PartnersSection {logos} />
+	{#await data.news}
+		<div class="loading">Loading news...</div>
+	{:then news}
+		<NewsSection {news} />
+	{/await}
+
+	<PartnersSection {logos} />
 </div>
