@@ -30,7 +30,7 @@
 		<nav class="flex h-20 items-center justify-between">
 			<!-- Logo -->
 			<a href="/" class="flex items-center">
-				<img src="https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/logoVietTriPNG-300x68.png" alt="Viet Tri Elevator" class="h-12" />
+				<img class=" h-10 md:h-12 object-contain" src="https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/logoVietTriPNG-300x68.png" alt="Viet Tri Elevator" />
 			</a>
 
 			<!-- Desktop Navigation -->
@@ -80,7 +80,7 @@
 		<!-- Mobile Menu -->
 		{#if isMenuOpen}
 			<div class="py-4 lg:hidden">
-				<div class="flex flex-col space-y-4">
+				<div class="flex flex-col space-y-4 pl-8">
 					{#each menuItems as item}
 						<a
 							href={item.href}

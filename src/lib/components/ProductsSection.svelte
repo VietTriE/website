@@ -15,7 +15,7 @@
         <div class="flex items-center gap-3 mt-4 lg:mt-10 mb-12 lg:mb-16 lg:gap-6">
             <div class="w-2 h-8 bg-blue-700"></div>
             <div class="flex ">
-                <span class="text-2xl lg:text-3xl">DANH MỤC <strong>SẢN PHẨM</strong></span>
+                <span class="text-2xl lg:text-3xl"> <strong>DANH MỤC SẢN PHẨM</strong></span>
             </div>
         </div>
         

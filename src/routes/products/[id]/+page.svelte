@@ -677,9 +677,9 @@
 </script>
 
 <div
-	class="mb-[80px] mt-[100px] flex max-w-sm flex-col items-center py-10 md:max-w-2xl lg:max-w-5xl"
+	class="mb-[80px] mt-[100px] flex max-w-sm flex-col items-center px-2 py-10 md:max-w-2xl lg:max-w-5xl"
 >
-	<div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-10 lg:gap-12 xl:grid-cols-3">
+	<div class="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:gap-12 ">
 		{#each data.products as product}
 			<ProductCard {product} handleClick={(id: string) => dialogHandle(id)} />
 		{/each}
@@ -763,8 +763,8 @@
 		{#if currentPost.info}
 			<div class="mt-10 max-w-[900px] bg-white p-4 md:p-8 lg:p-10">
 				<div class="text-gray-600">
-					<div class="flex flex-col justify-center md:gap-8 lg:flex-row lg:gap-12">
-						<div class="w-[400px]">
+					<div class="flex flex-col justify-between md:gap-8 lg:flex-row lg:gap-12">
+						<div class="">
 							<div class="flex items-start py-1">
 								<span class="w-[120px] text-gray-500">Trần<br />Ceiling</span>
 								<span class="text-blue-500">{currentPost.info.ceiling}</span>
@@ -786,7 +786,7 @@
 								<span class="text-blue-500">{currentPost.info.cabinFloor}</span>
 							</div>
 						</div>
-						<div class="w-[400px]">
+						<div class="">
 							<div class="flex items-start py-1">
 								<span class="w-[120px] text-gray-500">Tay vịn<br />Handrail</span>
 								<span class="text-blue-500">{currentPost.info.handrail}</span>

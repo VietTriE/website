@@ -12,9 +12,9 @@
 	</div>
 
 	<div class=" px-4 py-2">
-		<div class="mt-2">
-			<h3 class="text-center text-xl font-semibold text-slate-600">{product.name}</h3>
-			<p class="mt-2 line-clamp-1 text-center text-gray-600">{product.description}</p>
+		<div class="mt-1 md:mt-2">
+			<h3 class="text-center text-base md:text-xl font-semibold text-slate-600">{product.name}</h3>
+			<p class="mt-1 md:mt-2 line-clamp-1 text-center text-gray-600">{product.description}</p>
 		</div>
 
 		<!-- {#if product.info}
@@ -40,7 +40,7 @@
             </div>
         {/if} -->
 
-		<div class=" p-4 text-center">
+		<div class="p-1 md:p-4 text-center">
 			<button
 				onclick={() => handleClick(product.id)}
 				class=" font-semibold italic text-blue-500 hover:underline"

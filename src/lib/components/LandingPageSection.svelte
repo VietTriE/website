@@ -18,7 +18,7 @@
     <img 
         src="https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/landingPageTag.png" 
         alt="Landing Page Tag" 
-        class="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-4/5 md:w-3/5 lg:w-2/5 max-w-3xl"
+        class="absolute rounded-xl bg-white top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-4/5 md:w-3/5 lg:w-2/5 max-w-3xl"
     >
 </section>
 
