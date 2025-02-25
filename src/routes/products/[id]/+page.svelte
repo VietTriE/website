@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ProductCard from '$lib/components/product/ProductCard.svelte';
-	import Section from '@/components/post/Section.svelte';
+	import Section from '$lib/components/post/Section.svelte';
 	import * as Dialog from '$lib/components/ui/dialog';
 	import { ScrollArea } from '$lib/components/ui/scroll-area';
 	import type { Section as SectionType } from '$lib/types';
