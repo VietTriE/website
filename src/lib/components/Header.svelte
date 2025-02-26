@@ -46,14 +46,14 @@
 			</div>
 
 			<!-- Language Selector -->
-			<div class="hidden items-center space-x-2 lg:flex">
+			<!-- <div class="hidden items-center space-x-2 lg:flex">
 				<button class="rounded px-2 py-1 hover:bg-gray-100" onclick={() => switchToLanguage('vi')}>
 					<img src="https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/viFlag.png" alt="Vietnamese" class="h-6 w-6" />
 				</button>
 				<button class="rounded px-2 py-1 hover:bg-gray-100" onclick={() => switchToLanguage('en')}>
 					<img src="https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/usFlag.png" alt="English" class="h-6 w-6" />
 				</button>
-			</div>
+			</div> -->
 
 			<!-- Mobile Menu Button -->
 			<button class="p-2 lg:hidden" onclick={() => (isMenuOpen = !isMenuOpen)}>
@@ -92,7 +92,7 @@
 					{/each}
 
 					<!-- Mobile Language Selector -->
-					<div class="flex space-x-4 border-t pt-4">
+					<!-- <div class="flex space-x-4 border-t pt-4">
 						<button
 							class="flex items-center space-x-2 rounded px-2 py-1 hover:bg-gray-100"
 							onclick={() => switchToLanguage('vi')}
@@ -107,7 +107,7 @@
 							<img src="https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/usFlag.png" alt="English" class="h-4 w-4" />
 							<span>English</span>
 						</button>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		{/if}
