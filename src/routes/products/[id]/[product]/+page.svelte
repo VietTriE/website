@@ -1,14 +1,18 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import type { Section as SectionType } from '$lib/types';
+	import type { Section as SectionType, Product } from '$lib/types';
 	import Section from '$lib/components/post/Section.svelte';
-	import ProductCard from '$lib/components/product/ProductCard.svelte';
 	import SimilarProducts from '$lib/components/product/SimilarProducts.svelte';
 	let { data } = $props();
-	const productId = $page.params.product;
-	const product = data.products.find((product) => product.id === productId);
 	let currentImageIndex = $state(0);
 	let activeTab = $state('techSpec');
+	let productId = $state('');
+	let product = $state<Product>({} as Product);
+
+	$effect(() => {
+		productId = $page.params.product;
+		product = data.products.find((product) => product.id === productId);
+	});
 
 	function nextImage() {
 		if (product.refImages) {
