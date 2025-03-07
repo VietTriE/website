@@ -5,7 +5,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import { onMount } from 'svelte';
 	import '../app.css';
-
+	import Contact from '$lib/components/Contact.svelte';
 	let { children } = $props();
 </script>
 
@@ -14,8 +14,8 @@
 
 	{@render children()}
 	<Footer />
-
-	<a
+	<Contact />
+	<!-- <a
 		href="tel:0982739788"
 		class="fixed bottom-4 right-4 z-50 flex items-center space-x-2 rounded-full bg-blue-600 px-4 py-2 text-white shadow-lg transition-colors hover:bg-blue-700"
 	>
@@ -34,5 +34,5 @@
 			/>
 		</svg>
 		<span>0982.739.788</span>
-	</a>
+	</a> -->
 </ParaglideJS>
