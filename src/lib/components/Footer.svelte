@@ -82,14 +82,19 @@
     };
 </script>
 
-<footer class="bg-[#0f4e96] text-white py-16 px-4">
-    <div class="container mx-auto">
+<footer class="bg-[#0f4e96] text-white">
+    <div class=" flex items-center justify-center gap-2 py-6 md:py-8 bg-slate-100 text-slate-800">
+        <svg class="w-6 h-6 md:w-8 md:h-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+        <span class=" text-sm md:text-lg">Liên hệ hỗ trợ báo giá 24/7</span>
+         <span class="text-lg font-bold text-blue-500 ml-2 md:ml-8 md:text-xl">0982 739 788</span>
+    </div>
+    <div class="container mx-auto px-4 md:px-8 py-10 md:py-16">
         <div class="grid md:grid-cols-4 gap-8 items-start">
             <!-- Company Info -->
             <div class="space-y-4">
-                <img  src="https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/logoVietTriPNG-300x68.png" alt="logo" class="w-[200px] mb-4 bg-white rounded-sm" />
+                <img  src="https://pub-4076f91e2c23424590fb9b7fe99e41b5.r2.dev/logoVietTriPNG-300x68.png" alt="logo" class="w-[150px] md:w-[200px] mb-4 bg-white rounded-sm" />
                 
-                <p class="text-sm">
+                <p class="text-sm text-justify max-w-[260px] p-2">
                     Với +20 năm trong nghề, Công ty TNHH Thang Máy Việt Trí tự tin là một trong những đơn vị hàng đầu trong lĩnh vực thiết kế, sản xuất và lắp đặt thang máy.
                 </p>
                 
@@ -119,33 +124,33 @@
 
             <!-- About Us Column -->
             <div class="space-y-3">
-                <h3 class="text-lg font-semibold mb-4">Về chúng tôi</h3>
+                <h3 class="text-lg md:text-xl font-semibold mb-4">Về chúng tôi</h3>
                 {#each aboutUsInfo as item}
                     <div>
-                        <a href={item.href} class="hover:text-gray-300 block py-1">{item.label}</a>
+                        <a href={item.href} class="hover:text-gray-300 hover:underline flex items-center gap-2"><div class="w-1 h-1 bg-white rounded-full"></div>{item.label}</a>
                     </div>
                 {/each}
             </div>
 
             <!-- Featured Projects Column -->
             <div class="space-y-3">
-                <h3 class="text-lg font-semibold mb-4">Danh mục sản phẩm</h3>
+                <h3 class="text-lg md:text-xl font-semibold mb-4">Danh mục sản phẩm</h3>
                 {#each productsList as item}
                     <div>
-                        <a href={item.href} class="hover:text-gray-300 block py-1">{item.label}</a>
+                        <a href={item.href} class="hover:text-gray-300 hover:underline flex items-center gap-2"><div class="w-1 h-1 bg-white rounded-full"></div>{item.label}</a>
                     </div>
                 {/each}
             </div>
 
             <!-- Customer Support Column -->
             <div class="space-y-4">
-                <h3 class="text-lg font-semibold mb-4">Tư vấn khách hàng</h3>
+                <h3 class="text-lg md:text-xl font-semibold mb-4">Tư vấn khách hàng</h3>
                 
                 <div class="flex items-start gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mt-1 text-white flex-shrink-0" viewBox="0 0 384 512" fill="currentColor">
                         <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
                     </svg>
-                    <span>{customerSupport.address}</span>
+                    <span class="text-justify max-w-[300px]">{customerSupport.address}</span>
                 </div>
                 
                 <div class="flex items-center gap-2">

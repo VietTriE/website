@@ -93,9 +93,9 @@
 		{:else}
 			<span class="text-lg font-bold text-blue-600 lg:text-2xl">ĐẶT LỊCH TƯ VẤN</span>
 			<form class="w-full max-w-md px-4" onsubmit={handleSubmit}>
-				<div class="flex flex-col space-y-4">
+				<div class="flex flex-col space-y-6">
 					<div class="flex flex-col sm:flex-row sm:items-center sm:space-x-2">
-						<label for="name" class="w-full text-sm text-slate-700 sm:w-[120px]">Họ & tên *</label>
+						<label for="name" class="w-full text-sm text-slate-700 sm:w-[120px] whitespace-nowrap">Họ & tên <strong class="text-red-600 font-bold">*</strong></label>
 						<div class="flex-1">
 							<input
 								id="name"
@@ -109,7 +109,7 @@
 
 					<div class="flex flex-col sm:flex-row sm:items-center sm:space-x-2">
 						<label for="phone" class="w-full text-sm text-slate-700 sm:w-[120px]"
-							>Số điện thoại *</label
+							>Số điện thoại <strong class="text-red-600 font-bold">*</strong></label
 						>
 						<div class="flex-1">
 							<input
@@ -146,9 +146,9 @@
 						</div>
 					</div>
 
-					<div class="flex flex-col sm:flex-row sm:space-x-2">
+					<div class="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-2">
 						<label for="service" class="w-full text-sm text-slate-700 sm:w-[120px]"
-							>Dịch vụ quan tâm *</label
+							>Dịch vụ quan tâm <strong class="text-red-600 font-bold">*</strong></label
 						>
 						<div class="flex flex-1 flex-col space-y-2">
 							{#each services as service}
@@ -190,8 +190,11 @@
 					>
 						GỬI THÔNG TIN
 					</button>
-					<span class="mt-2 text-sm italic text-slate-600">
+					<span class="mt-4 text-sm  text-blue-400">
 						Việt Trí cam kết bảo mật thông tin khách hàng.
+					</span>
+					<span class="mt-2 text-sm italic text-slate-500 text-center">
+						Vui lòng điền đầy đủ thông tin vào phần có dấu (<strong class="text-red-600 font-bold">*</strong>) để chúng tôi có thể liên hệ được với quý khách.
 					</span>
 				</div>
 			</form>

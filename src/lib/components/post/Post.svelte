@@ -17,7 +17,7 @@
     <div class="container mx-auto px-4 py-8 lg:py-16">
         <div class="mx-auto max-w-4xl">
             <div class="mb-8 text-sm text-gray-600">
-                {#if data.author}
+                <!-- {#if data.author}
                     <span class="mr-4">
                         <span class="font-medium">Tác giả:</span> {data.author}
                     </span>
@@ -29,7 +29,7 @@
                     <span class="ml-4">
                         <span class="font-medium">Cập nhật:</span> {formatDate(data.editedAt)}
                     </span>
-                {/if}
+                {/if} -->
             </div>
 
             {#each data.sections as section}

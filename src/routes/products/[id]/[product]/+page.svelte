@@ -755,45 +755,45 @@
 					<div class="flex flex-col justify-between md:gap-8 lg:flex-row lg:gap-12">
 						<div class="">
 							<div class="flex items-start py-1 justify-between">
-								<span class="w-[120px] text-gray-500">Trần<br />Ceiling</span>
+								<span class="w-[120px] text-slate-600 text-sm"><strong>Trần</strong><br />Ceiling</span>
 								<span class="text-blue-500 text-right">{product.info.ceiling}</span>
 							</div>
 							<div class="flex items-start py-1 justify-between">
-								<span class="w-[120px] text-gray-500">Vách trước<br />Front wall</span>
+								<span class="w-[120px] text-slate-600 text-sm"><strong>Vách trước</strong><br />Front wall</span>
 								<span class="text-blue-500 text-right">{product.info.frontWall}</span>
 							</div>
 							<div class="flex items-start py-1 justify-between">
-								<span class="w-[120px] text-gray-500">Vách hông<br />Side wall</span>
+								<span class="w-[120px] text-slate-600 text-sm"><strong>Vách hông</strong><br />Side wall</span>
 								<span class="text-blue-500 text-right">{product.info.sideWall}</span>
 							</div>
 							<div class="flex items-start py-1 justify-between">
-								<span class="w-[120px] text-gray-500">Vách sau<br />Back wall</span>
+								<span class="w-[120px] text-slate-600 text-sm"><strong>Vách sau</strong><br />Back wall</span>
 								<span class="text-blue-500 text-right">{product.info.backWall}</span>
 							</div>
 							<div class="flex items-start py-1 justify-between">
-								<span class="w-[120px] text-gray-500">Sàn cabin<br />Cabin floor</span>
+								<span class="w-[120px] text-slate-600 text-sm"><strong>Sàn cabin</strong><br />Cabin floor</span>
 								<span class="text-blue-500 text-right">{product.info.cabinFloor}</span>
 							</div>
 						</div>
 						<div class="">
 							<div class="flex items-start py-1 justify-between">
-								<span class="w-[120px] text-gray-500">Tay vịn<br />Handrail</span>
+								<span class="w-[120px] text-slate-600 text-sm"><strong>Tay vịn</strong><br />Handrail</span>
 								<span class="text-blue-500 text-right">{product.info.handrail}</span>
 							</div>
 							<div class="flex items-start py-1 justify-between">
-								<span class="w-[120px] text-gray-500">Cửa cabin<br />Cabin door</span>
+								<span class="w-[120px] text-slate-600 text-sm"><strong>Cửa cabin</strong><br />Cabin door</span>
 								<span class="text-blue-500 text-right">{product.info.cabinDoor}</span>
 							</div>
 							<div class="flex items-start py-1 justify-between">
-								<span class="w-[120px] text-gray-500">Cửa tầng chính<br />Lobby</span>
+								<span class="w-[120px] text-slate-600 text-sm"><strong>Cửa tầng chính</strong><br />Lobby</span>
 								<span class="text-blue-500 text-right">{product.info.lobby}</span>
 							</div>
 							<div class="flex items-start py-1 justify-between">
-								<span class="w-[120px] text-gray-500">Cửa tầng khác<br />Floors</span>
+								<span class="w-[120px] text-slate-600 text-sm"><strong>Cửa tầng khác</strong><br />Floors</span>
 								<span class="text-blue-500 text-right">{product.info.floors}</span>
 							</div>
 							<div class="flex items-start py-1 justify-between">
-								<span class="w-[120px] text-gray-500">Bao che<br />Jamp</span>
+								<span class="w-[120px] text-slate-600 text-sm"><strong>Bao che</strong><br />Jamp</span>
 								<span class="text-blue-500 text-right">{product.info.gfnf}</span>
 							</div>
 						</div>
@@ -804,12 +804,12 @@
 	</div>
 
 	{#if product.categoryId && defaultTechSpec[product.categoryId]}
-		<div class=" mt-10 flex flex-col items-center w-[380px] md:w-full">
+		<div class=" mt-10 flex flex-col items-center md:w-full max-w-4xl">
 			<!-- Tab Navigation with Horizontal Scroll on Mobile -->
 			<div class="border-b border-gray-200">
-				<nav class="-mb-px flex space-x-8" aria-label="Tabs">
+				<nav class="-mb-px flex space-x-1 md:space-x-8" aria-label="Tabs">
 					<button
-						class="border-b-2 px-1 py-4 text-sm font-medium {activeTab === 'techSpec'
+						class="border-b-2 px-1 py-4 text-xs md:text-base font-medium {activeTab === 'techSpec'
 							? 'border-blue-500 text-blue-600'
 							: 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}"
 						onclick={() => (activeTab = 'techSpec')}
@@ -817,7 +817,7 @@
 						ĐẶC TÍNH KỸ THUẬT
 					</button>
 					<button
-						class="border-b-2 px-1 py-4 text-sm font-medium {activeTab === 'techDrawing'
+						class="border-b-2 px-1 py-4 text-xs md:text-base font-medium {activeTab === 'techDrawing'
 							? 'border-blue-500 text-blue-600'
 							: 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}"
 						onclick={() => (activeTab = 'techDrawing')}
@@ -825,7 +825,7 @@
 						BẢN VẼ KỸ THUẬT
 					</button>
 					<button
-						class="border-b-2 px-1 py-4 text-sm font-medium {activeTab === 'spec'
+						class="border-b-2 px-1 py-4 text-xs md:text-base font-medium {activeTab === 'spec'
 							? 'border-blue-500 text-blue-600'
 							: 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}"
 						onclick={() => (activeTab = 'spec')}
@@ -833,7 +833,7 @@
 						THÔNG SỐ KỸ THUẬT
 					</button>
 					<button
-						class="border-b-2 px-1 py-4 text-sm font-medium {activeTab === 'power'
+						class="border-b-2 px-1 py-4 text-xs md:text-base font-medium {activeTab === 'power'
 							? 'border-blue-500 text-blue-600'
 							: 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}"
 						onclick={() => (activeTab = 'power')}
@@ -841,7 +841,7 @@
 						NGUỒN ĐIỆN
 					</button>
 					<button
-						class="border-b-2 px-1 py-4 text-sm font-medium {activeTab === 'shaft'
+						class="border-b-2 px-1 py-4 text-xs md:text-base font-medium {activeTab === 'shaft'
 							? 'border-blue-500 text-blue-600'
 							: 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}"
 						onclick={() => (activeTab = 'shaft')}
@@ -852,7 +852,7 @@
 			</div>
 
 			<!-- Tab Content -->
-			<div class="mt-6 px-4 min-h-[300px] max-w-3xl">
+			<div class="  mt-6 px-4 py-6 min-h-[300px] text-sm md:text-base w-full">
 				{#if activeTab === 'techSpec'}
 					{#each defaultTechSpec[product.categoryId].techSpec as section}
 						<Section {section} />

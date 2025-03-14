@@ -24,8 +24,8 @@
     }
 </script>
 
-<section class=" bg-blue-100 py-16 px-4">
-    <div class="container mx-auto">
+<section class=" bg-blue-100 py-12 md:py-16 px-4">
+    <div class="md:container md:mx-auto mt-16">
         <div class="flex items-center gap-3 mt-8 md:mt-16 mb-12 lg:mb-16 lg:gap-6">
             <div class="w-2 h-8 bg-blue-700"></div>
             <div class="flex">
@@ -33,7 +33,7 @@
             </div>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+        <div class="grid grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-8">
             {#each displayedNews as newsItem}
                 <a 
                     href={`/news/${newsItem.id}`} 
@@ -46,8 +46,8 @@
                             class="w-full h-full rounded-lg object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                     </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-3 group-hover:text-blue-700 transition-colors line-clamp-2">
+                    <div class="p-2 md:p-4">
+                        <h3 class="text-sm md:text-lg font-semibold mb-1 md:mb-3 group-hover:text-blue-700 transition-colors line-clamp-2">
                             {newsItem.title}
                         </h3>
                         <p class="text-gray-600 text-sm line-clamp-3">

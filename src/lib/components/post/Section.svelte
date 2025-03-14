@@ -5,15 +5,15 @@
 </script>
 
 {#if section.type === 'header'}
-    <h1 class="mb-8 text-2xl font-bold md:text-3xl lg:text-4xl">
+    <h1 class="mb-8 text-2xl font-bold md:text-3xl">
         {section.content?.[0]}
     </h1>
 {:else if section.type === 'subheader'}
-    <h2 class="mb-4 mt-8 text-xl font-semibold md:text-2xl lg:text-3xl">
+    <h2 class="mb-4 mt-8 text-xl font-semibold md:text-2xl ">
         {section.content?.[0]}
     </h2>
 {:else if section.type === 'paragraph'}
-    <div class="mb-6 space-y-4">
+    <div class="mb-6 space-y-2">
         {#each section.content || [] as paragraph}
             <p class="text-gray-700 leading-relaxed md:text-lg">
                 {paragraph}
@@ -37,5 +37,5 @@
         {/each}
     </ul>
 {:else if section.type === 'space'}
-    <div class="h-8"></div>
+    <div class="h-6 md:h-8"></div>
 {/if}
