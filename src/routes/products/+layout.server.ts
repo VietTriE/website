@@ -19,10 +19,15 @@ async function fetchPosts(type: string): Promise<Post[]> {
 }
 
 export const load: LayoutServerLoad = async ({ fetch, params }) => {
-    let products: Post[] = [];
-    const id = params.id;
-    if (availableType.includes(id)) {
-        products = await fetchPosts(id);
-    }
-    return { products, id };
+    
+    return {
+        thangTaiKhach: await fetchPosts("thangTaiKhach"),
+        thangTaiHang: await fetchPosts("thangTaiHang"),
+        thangTaiOTo: await fetchPosts("thangTaiOTo"),
+        thangThucPham: await fetchPosts("thangThucPham"),
+        thangQuanSat: await fetchPosts("thangQuanSat"),
+        thangTaiGiuongBenh: await fetchPosts("thangTaiGiuongBenh"),
+        thangTaiRac: await fetchPosts("thangTaiRac"),
+        toiTaiHang: await fetchPosts("toiTaiHang")
+     };
 };
