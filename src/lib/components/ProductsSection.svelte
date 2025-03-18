@@ -10,7 +10,7 @@
     let displayedProducts = $derived(products.slice(0, 6));
 </script>
 
-<section class="bg-slate-200 py-8 md:py-16 px-4 ">
+<section class="bg-slate-100 py-6 md:py-12 px-4 ">
     <div class=" md:container md:mx-auto">
         <div class="flex items-center gap-3 mt-4 lg:mt-10 mb-12 lg:mb-16 lg:gap-6">
             <div class="w-2 h-8 bg-blue-700"></div>
